@@ -1,0 +1,22 @@
+{
+  "name": "aframe-smart-home-example",
+  "version": "0.0.0",
+  "description": "Serve for developement",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzr/aframe-smart-home.git"
+  },
+  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rzr/aframe-smart-home/issues"
+  },
+  "homepage": "https://github.com/rzr/aframe-smart-home#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
