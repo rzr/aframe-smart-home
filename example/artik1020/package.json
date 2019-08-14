@@ -1,0 +1,27 @@
+{
+  "name": "aframe-smart-home-example-artik1020",
+  "version": "0.0.0",
+  "description": "A solar panel device",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzr/aframe-smart-home.git"
+  },
+  "keywords": [
+    "solar",
+    "webthing"
+  ],
+  "bugs": {
+    "url": "https://github.com/rzr/aframe-smart-home/issues"
+  },
+  "homepage": "https://libraries.io/npm/aframe-smart-home",
+  "dependencies": {
+    "webthing": "^0.12.0"
+  }
+}
