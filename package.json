@@ -1,6 +1,6 @@
 {
   "name": "aframe-smart-home",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Digital twin smart home proof of concept",
   "main": "index.js",
   "scripts": {
