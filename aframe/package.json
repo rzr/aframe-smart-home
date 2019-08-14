@@ -1,6 +1,6 @@
 {
   "name": "aframe-smart-home-example",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Serve for developement",
   "main": "example.js",
   "scripts": {
