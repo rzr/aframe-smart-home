@@ -1,6 +1,6 @@
 {
   "name": "aframe-smart-home-example-artik1020",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A solar panel device",
   "main": "index.js",
   "scripts": {
