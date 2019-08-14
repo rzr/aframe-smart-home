@@ -14,11 +14,11 @@ default: all
 
 project ?= aframe-smart-home
 tmp_dir ?= tmp
-runtime ?= node
+runtime ?= iotjs
 run_args ?=
 run_timeout ?= 10
 
-main_src ?= index.js
+main_src ?= example/index.js
 NODE_PATH := .:${NODE_PATH}
 export NODE_PATH
 
@@ -26,15 +26,24 @@ port ?= 8888
 hostname ?= localhost
 url ?= http://${localhost}:${port}
 
+webthing-iotjs_url ?= https://github.com/rzr/webthing-iotjs
+webthing-iotjs_revision ?= webthing-iotjs-0.12.0
+webthing-iotjs_dir ?= ${iotjs_modules_dir}/webthing-iotjs
+iotjs_modules_dirs += ${webthing-iotjs_dir}
+
+iotjs_modules_dir ?= ${CURDIR}/iotjs_modules
+export iotjs_modules_dir
+
+
 help:
 	@echo "## Usage: "
 	@echo "# make start"
 
-node_modules: package.json
+node/modules: package.json
 	npm install
 
-modules: ${runtime}_modules
-	ls $<
+modules: ${runtime}/modules
+	@echo "# log: $@: $^"
 
 build:
 	@echo "# log: $@: $^"
@@ -64,3 +73,16 @@ start: run
 
 LICENSE: /usr/share/common-licenses/MPL-2.0
 	cp -av $< $@
+
+iotjs/start: ${main_src} ${iotjs_modules_dirs}
+	${@D} $<
+
+iotjs/modules: ${iotjs_modules_dirs}
+	ls $^
+
+${webthing-iotjs_dir}: Makefile
+	git clone --recursive --depth=1 \
+ --branch "${webthing-iotjs_revision}" \
+ "${webthing-iotjs_url}" \
+ "$@"
+	${MAKE} -C $@ ${runtime}/modules
