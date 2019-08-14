@@ -1,0 +1,10 @@
+[Unit]
+Description=aframe-smart-home
+After=network.target
+
+[Service]
+ExecStart=/usr/local/opt/aframe-smart-home/example/artik1020/run.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
