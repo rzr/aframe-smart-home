@@ -65,3 +65,6 @@ typings/
 # Emacs files
 *~
 tmp
+
+# IoT.js
+**/iotjs_modules
