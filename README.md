@@ -1,2 +1,7 @@
-# aframe-smart-home
-http://purl.org/aframe-smart-home
+# AFRAME-SMARTHOME #
+
+## USAGE: ##
+
+## RESOURCES: ##
+
+* <https://www.npmjs.com/package/aframe-webthing>
