@@ -1,0 +1,40 @@
+{
+  "name": "aframe-smart-home",
+  "version": "0.0.0",
+  "description": "Digital twin smart home proof of concept",
+  "main": "index.js",
+  "scripts": {
+    "start": "PORT=8888 node example",
+    "example": "node example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzr/aframe-smart-home.git"
+  },
+  "iotjs": {
+    "version": ">=1.0"
+  },
+  "keywords": [
+    "3d",
+    "aframe-component",
+    "digitaltwin",
+    "digitaltwins",
+    "home",
+    "house",
+    "iotjs-module",
+    "smart-home",
+    "solar",
+    "webthing",
+    "xr"
+  ],
+  "bugs": {
+    "url": "https://github.com/rzr/aframe-smart-home/issues"
+  },
+  "homepage": "https://libraries.io/npm/aframe-smart-home",
+  "dependencies": {
+    "webthing-iotjs": "^0.12.0"
+  }
+}
