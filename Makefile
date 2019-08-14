@@ -27,7 +27,7 @@ hostname ?= localhost
 url ?= http://${localhost}:${port}
 
 webthing-iotjs_url ?= https://github.com/rzr/webthing-iotjs
-webthing-iotjs_revision ?= webthing-iotjs-0.12.0
+webthing-iotjs_revision ?= webthing-iotjs-0.12.1-0
 webthing-iotjs_dir ?= ${iotjs_modules_dir}/webthing-iotjs
 iotjs_modules_dirs += ${webthing-iotjs_dir}
 
