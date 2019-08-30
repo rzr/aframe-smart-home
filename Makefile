@@ -26,18 +26,29 @@ port ?= 8888
 hostname ?= localhost
 url ?= http://${localhost}:${port}
 
-webthing-iotjs_url ?= https://github.com/rzr/webthing-iotjs
-webthing-iotjs_revision ?= webthing-iotjs-0.12.1-0
-webthing-iotjs_dir ?= ${iotjs_modules_dir}/webthing-iotjs
-iotjs_modules_dirs += ${webthing-iotjs_dir}
-
 iotjs_modules_dir ?= ${CURDIR}/iotjs_modules
 export iotjs_modules_dir
+
+webthing-iotjs_url ?= https://github.com/rzr/webthing-iotjs
+webthing-iotjs_revision ?= webthing-iotjs-0.12.1-1
+webthing-iotjs_dir ?= ${iotjs_modules_dir}/webthing-iotjs
+iotjs_modules_dirs += ${webthing-iotjs_dir}
 
 
 help:
 	@echo "## Usage: "
 	@echo "# make start"
+all: modules
+	@echo "# log: $@: $^"
+
+check:
+	@echo "# log: $@: $^"
+
+setup:
+	@echo "# log: $@: $^"
+
+test:
+	@echo "# log: $@: $^"
 
 node/modules: package.json
 	npm install
