@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: aframe-smart-home
+spec:
+  rules:
+  - host: aframe-smart-home.localhost
+    http:
+      paths:
+      - backend:
+          serviceName: aframe-smart-home
+          servicePort: 8888
