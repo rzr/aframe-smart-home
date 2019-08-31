@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: aframe-smart-home
+  name: aframe-smart-home
+spec:
+  ports:
+  - port: 8888
+    protocol: TCP
+    targetPort: 8888
+  selector:
+    app: aframe-smart-home
+  type: NodePort
+status:
+  loadBalancer: {}
