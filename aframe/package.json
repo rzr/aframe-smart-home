@@ -4,6 +4,7 @@
   "description": "Serve for developement",
   "main": "example.js",
   "scripts": {
+    "start": "node example",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
