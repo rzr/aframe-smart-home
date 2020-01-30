@@ -47,7 +47,7 @@ Then a model can be updated by reading the actual value, the device's color is u
 
 
 [![Demo](
-https://repository-images.githubusercontent.com/202191598/70e6e100-bdff-11e9-9369-1358c70eb0cb#aframe-smart-home.gif
+https://repository-images.githubusercontent.com/202191598/26accf00-2da3-11ea-8e6a-f8fdba75e86a#./file/aframe-smart-home.gif
 )](
 https://rzr.github.io/aframe-smart-home/aframe
 "#aframe-smart-home")
