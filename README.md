@@ -60,6 +60,25 @@ https://rzr.github.io/aframe-smart-home/aframe
 
 Default application is a simulator that mock sensor(s) values.
 
+```sh
+$ npm install aframe-smart-home
+$ cd node_modules/aframe-smart-home/
+$ npm install && npm start
+$ curl http://localhost:8888/
+{ "id": "urn:dev:ops:smarthome-1234", (...)
+  "properties": {
+    "level": {
+      "description": "Solar sensor level",
+      "links": [ {
+          "rel": "property",
+          "href": "/properties/level" (...)
+$ curl http://localhost:8888/properties
+{"level":42}
+cd aframe
+npm install && PORT=42080 npm start
+x-www-browser http://localhost:42080/aframe/
+```
+
 ### CLOUD: ###
 
 Glitch can run this previous simulator
@@ -127,3 +146,4 @@ Mozilla gateway could be also used with additional bearer token.
 * <https://www.npmjs.com/package/aframe-webthing>
 * <https://www.npmjs.com/package/webthing-iotjs>
 * <https://www.npmjs.com/package/webthing>
+* <https://fosdem.org/2020/schedule/event/web_of_twins/>
