@@ -11,7 +11,7 @@
  */
 const express = require('express');
 const app = express();
-app.use(express.static('.'));
+app.use(express.static('..'));
 const listener = app.listen(process.env.PORT, function() {
   console.log('Listening to:\nhttp://localhost:' + listener.address().port);
 });
