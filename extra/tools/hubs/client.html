@@ -1,0 +1,61 @@
+<html>
+<!--
+    SPDX-License-Identifier: MPL-2.0
+    Copyright: 2020-present Philippe Coval <https://purl.org/rzr/>
+-->
+<head>
+<script><!--
+function setText(text) {
+  console.log(text);
+  document.form.console.value = text;
+}
+
+function log(arg) {
+  var text = "log: " + arg + "\n";
+  console.log(text);
+  document.form.console.value += text;
+}
+
+function change() {
+  var source = document.form.source.value;
+  eval(source);
+}
+//-->
+</script>
+</head>
+
+<body onload="if(!true) { change(); }">
+
+<form name="form">
+
+Source :<br />
+<textarea rows="8" cols="40" name="source">
+
+log("begin");
+url= "ws://localhost:1337/";
+ws = new WebSocket(url);
+ws.onclose = function(){log("close");};
+ws.onmessage = function(evt){setText(evt.data);};
+ws.onopen = function(){
+log("open");
+ws.send("query");
+}
+
+log("end");
+</textarea>
+
+<p />
+
+Console :<br />
+<textarea rows="8" cols="40" name="console">
+</textarea>
+<p />
+<input type="button" onclick="change();" value="eval" />
+<input type="button" onclick="document.form.console.value=''" value="clear output" />
+<input type="button" onclick="document.form.source.value=''" value="clear input" />
+</form>
+
+<a href="http://localhost:1337/#">http://localhost:1337</a>
+
+</body>
+</html>
