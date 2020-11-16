@@ -35,6 +35,7 @@
   },
   "homepage": "https://libraries.io/npm/aframe-smart-home",
   "dependencies": {
+    "websocket": "^1.0.32",
     "webthing-iotjs": "^0.12.1-0"
   }
 }
